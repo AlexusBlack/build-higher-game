@@ -1,0 +1,9 @@
+- Different weight boxes
+- Different size boxes
+- Wind to make life harder
+- Helper tools
+  - Move placed box
+  - glue boxes
+  - sticky tape around boxes
+  - rope around boxes
+  - support baloons
