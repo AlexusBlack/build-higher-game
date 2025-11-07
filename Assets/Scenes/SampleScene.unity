@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2107884676298967620, guid: 6314165dfec55dec4a2d345918aabd22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2107884676298967620, guid: 6314165dfec55dec4a2d345918aabd22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -850,10 +850,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2069205262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 50}
+  m_SizeDelta: {x: -160, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &580445990
 MonoBehaviour:
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Boxes: 3'
+  m_text: 'Height: 115.7m Boxes: 333'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1000,9 +1000,24 @@ MonoBehaviour:
   - name: Standard Box
     prefab: {fileID: 4977067103926656553, guid: 6d1af243cd53ad855a9477cb0cd50795, type: 3}
     useWeight: 100
+    tags: []
+  - name: Crazy Box
+    prefab: {fileID: 6194271927530725493, guid: f8c3b273294618f7888aed9bdf314f05, type: 3}
+    useWeight: 50
+    tags:
+    - non-kinematic-hold
   - name: Heavy Box
     prefab: {fileID: 6194271927530725493, guid: 136b1e97d2379fea0883139dc0426f0e, type: 3}
     useWeight: 100
+    tags: []
+  - name: Tall Box
+    prefab: {fileID: 2505656058287634123, guid: fe9847aa2db24447f894088476d2458c, type: 3}
+    useWeight: 50
+    tags: []
+  - name: Light Box
+    prefab: {fileID: 6194271927530725493, guid: a74b3567aa5f526de8bfcc1fc4c27022, type: 3}
+    useWeight: 100
+    tags: []
   boxesParent: {fileID: 1249876182}
 --- !u!1001 &1147550725
 PrefabInstance:
@@ -1689,7 +1704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCountText: {fileID: 580445990}
   endGameContainer: {fileID: 1446465228}
+  boxesParent: {fileID: 1249876183}
   boxCount: 3
+  highestBoxY: 0
 --- !u!1001 &6081361375556914923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1761,7 +1778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2107884676298967620, guid: 6314165dfec55dec4a2d345918aabd22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2107884676298967620, guid: 6314165dfec55dec4a2d345918aabd22, type: 3}
       propertyPath: m_LocalPosition.z

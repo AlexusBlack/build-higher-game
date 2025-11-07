@@ -8,4 +8,5 @@ public struct BoxType
   public string name;
   public GameObject prefab;
   public int useWeight;
+  public List<string> tags;
 }

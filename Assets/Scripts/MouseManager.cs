@@ -12,6 +12,7 @@ public class MouseManager : MonoBehaviour
 
     private GameManager gameManager;
     private int totalWeight;
+    private BoxType currentBoxType;
 
     void Start()
     {
@@ -45,7 +46,7 @@ public class MouseManager : MonoBehaviour
         }
     }
 
-    GameObject GetRandomBoxPrefab()
+    BoxType GetRandomBoxPrefab()
     {
         int randomValue = Random.Range(0, totalWeight);
         int cumulativeWeight = 0;
@@ -55,18 +56,21 @@ public class MouseManager : MonoBehaviour
             cumulativeWeight += boxType.useWeight;
             if (randomValue < cumulativeWeight)
             {
-                return boxType.prefab;
+                return boxType;
             }
         }
 
-        return boxTypes[0].prefab; // Fallback
+        return boxTypes[0]; // Fallback
     }
 
     void StartPlacing()
     {
-        currentObject = Instantiate(GetRandomBoxPrefab(), boxesParent.transform);
-        // disable rigidbody while placing
-        currentObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        currentBoxType = GetRandomBoxPrefab();
+        currentObject = Instantiate(currentBoxType.prefab, boxesParent.transform);
+        if(!currentBoxType.tags.Contains("non-kinematic-hold")) {
+          // disable rigidbody while placing
+          currentObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
         gameManager.AddBox();
         isPlacing = true;
     }
