@@ -686,7 +686,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 5
-  edgeThreshold: 10
   minY: 2.5
   maxY: 1000
 --- !u!1 &534285626
@@ -997,7 +996,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c916cee6c2d252a39a78a8a2650db885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToPlace: {fileID: 4977067103926656553, guid: 6d1af243cd53ad855a9477cb0cd50795, type: 3}
+  boxTypes:
+  - name: Standard Box
+    prefab: {fileID: 4977067103926656553, guid: 6d1af243cd53ad855a9477cb0cd50795, type: 3}
+    useWeight: 100
+  - name: Heavy Box
+    prefab: {fileID: 6194271927530725493, guid: 136b1e97d2379fea0883139dc0426f0e, type: 3}
+    useWeight: 100
   boxesParent: {fileID: 1249876182}
 --- !u!1001 &1147550725
 PrefabInstance:

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Build_Highier.sln"
+    "dotnet.defaultSolution": "build-higher-game.sln"
 }
