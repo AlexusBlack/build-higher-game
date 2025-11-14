@@ -1016,7 +1016,11 @@ MonoBehaviour:
     tags: []
   - name: Light Box
     prefab: {fileID: 6194271927530725493, guid: a74b3567aa5f526de8bfcc1fc4c27022, type: 3}
-    useWeight: 100
+    useWeight: 50
+    tags: []
+  - name: Oily Box
+    prefab: {fileID: 6194271927530725493, guid: efc8fc3a517c473cc840ca4f1e5d4560, type: 3}
+    useWeight: 50
     tags: []
   boxesParent: {fileID: 1249876182}
 --- !u!1001 &1147550725
